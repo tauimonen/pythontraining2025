@@ -12,7 +12,7 @@ computer_parts = []
 
 print("HOLA customer!")
 while current_choice != "0":
-    if current_choice in "123456":
+    if current_choice in "1234567":
         print(f"Adding: {current_choice}")
         if current_choice == "1":
             computer_parts.append("computer")
@@ -28,8 +28,8 @@ while current_choice != "0":
             computer_parts.append("hdmi cable")
     else:
         print("Please add options from the list below:")
-        for part in available_parts:
-            print(f"{available_parts.index(part) + 1}: {part}")
+        for number, part in enumerate(available_parts):
+            print(f"{number + 1}: {part}")
 
     current_choice = input()
 
